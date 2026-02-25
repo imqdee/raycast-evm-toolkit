@@ -21,6 +21,8 @@ declare namespace Preferences {
   export type Code = ExtensionPreferences & {}
   /** Preferences accessible in the `profile` command */
   export type Profile = ExtensionPreferences & {}
+  /** Preferences accessible in the `simulate` command */
+  export type Simulate = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
@@ -38,5 +40,7 @@ declare namespace Arguments {
 }
   /** Arguments passed to the `profile` command */
   export type Profile = {}
+  /** Arguments passed to the `simulate` command */
+  export type Simulate = {}
 }
 
