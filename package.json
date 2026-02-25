@@ -84,6 +84,12 @@
       "title": "Open Profile",
       "description": "Open an account's portfolio page on DeBank",
       "mode": "no-view"
+    },
+    {
+      "name": "simulate",
+      "title": "Simulate Transaction",
+      "description": "Open a prefilled Tenderly simulation page for a transaction",
+      "mode": "view"
     }
   ],
   "categories": ["Developer Tools", "Web"],
