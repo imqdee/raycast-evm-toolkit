@@ -17,6 +17,8 @@ declare namespace Preferences {
   export type Explorer = ExtensionPreferences & {}
   /** Preferences accessible in the `code` command */
   export type Code = ExtensionPreferences & {}
+  /** Preferences accessible in the `profile` command */
+  export type Profile = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
@@ -30,5 +32,7 @@ declare namespace Arguments {
   /** Mainnet */
   "network": "1" | "8453" | "42161" | "137" | "10" | "56" | "43114" | "100" | "81457" | "146"
 }
+  /** Arguments passed to the `profile` command */
+  export type Profile = {}
 }
 

@@ -72,6 +72,12 @@
           ]
         }
       ]
+    },
+    {
+      "name": "profile",
+      "title": "Open Profile",
+      "description": "Open an account's portfolio page on DeBank",
+      "mode": "no-view"
     }
   ],
   "categories": ["Developer Tools", "Web"],
