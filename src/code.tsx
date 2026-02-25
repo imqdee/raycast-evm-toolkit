@@ -1,9 +1,7 @@
 import { Clipboard, type LaunchProps, Toast, closeMainWindow, open, showHUD, showToast } from "@raycast/api";
 import { buildDethUrl } from "./lib/build-deth-url";
 import { detectInputType } from "./lib/detect-input";
-import { NETWORKS } from "./lib/networks";
-
-const MAINNET_CHAIN_ID = "1";
+import { getNetwork } from "./lib/get-network";
 
 export default async function Command(props: LaunchProps<{ arguments: Arguments.Code }>) {
   const { network: networkArg } = props.arguments;
@@ -30,8 +28,7 @@ export default async function Command(props: LaunchProps<{ arguments: Arguments.
     return;
   }
 
-  const chainId = networkArg || MAINNET_CHAIN_ID;
-  const network = NETWORKS.find((n) => String(n.chainId) === chainId);
+  const network = getNetwork(networkArg);
   if (!network) {
     await showToast({ style: Toast.Style.Failure, title: "Unknown network" });
     return;
