@@ -21,9 +21,16 @@ The extension detects what you copied based on its format:
 | `0x` + 66 hex characters | Transaction hash |
 | Digits only              | Block number     |
 
-### Code (planned)
+### Open Code (available)
 
-Open a smart contract's source code in a web IDE via [deth.net](https://etherscan.deth.net/).
+Opens a smart contract's source code in a web IDE via [deth.net](https://etherscan.deth.net/).
+
+1. Copy a contract address
+2. Trigger **Open Code** in Raycast
+3. Optionally pick a network (defaults to Mainnet)
+4. Press Enter
+
+Only addresses are accepted (tx hashes and block numbers are rejected). Available on networks supported by deth.net: Mainnet, Base, Arbitrum, Polygon, Optimism, BNB, Avalanche, Gnosis, Blast, Sonic.
 
 ### Profile (planned)
 
