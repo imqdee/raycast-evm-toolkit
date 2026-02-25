@@ -45,7 +45,7 @@ export const NETWORKS: Network[] = [
     explorerDomain: "basescan",
   },
   {
-    name: "BNB",
+    name: "BSC",
     chainId: 56,
     explorerUrl: "https://bscscan.com",
     explorerType: "etherscan",

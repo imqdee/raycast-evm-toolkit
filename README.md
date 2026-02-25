@@ -30,7 +30,7 @@ Opens a smart contract's source code in a web IDE via [deth.net](https://ethersc
 3. Optionally pick a network (defaults to Mainnet)
 4. Press Enter
 
-Only addresses are accepted (tx hashes and block numbers are rejected). Available on networks supported by deth.net: Mainnet, Base, Arbitrum, Polygon, Optimism, BNB, Avalanche, Gnosis, Blast, Sonic.
+Only addresses are accepted (tx hashes and block numbers are rejected). Available on networks supported by deth.net: Mainnet, Base, Arbitrum, Polygon, Optimism, BSC, Avalanche, Gnosis, Blast, Sonic.
 
 ### Profile (planned)
 
@@ -46,7 +46,7 @@ Open an address's on-chain social graph on [Arkham](https://intel.arkm.com/).
 
 ## Supported Networks
 
-Mainnet, Base, Arbitrum, Polygon, Optimism, BNB, Linea, Ink, Arbitrum Nova, zkSync, Avalanche, Gnosis, Scroll, Celo, Mantle, Blast, Sonic, Unichain, Flow, World Chain, ApeChain, Abstract, HyperEVM, Mode.
+Mainnet, Base, Arbitrum, Polygon, Optimism, BSC, Linea, Ink, Arbitrum Nova, zkSync, Avalanche, Gnosis, Scroll, Celo, Mantle, Blast, Sonic, Unichain, Flow, World Chain, ApeChain, Abstract, HyperEVM, Mode.
 
 Each network is mapped to its native block explorer. The extension handles explorer-specific URL patterns (e.g., zkSync uses `/batch/` instead of `/block/` for block pages).
 
