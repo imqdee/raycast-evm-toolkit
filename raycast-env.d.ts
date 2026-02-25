@@ -7,7 +7,10 @@
 
 /* eslint-disable @typescript-eslint/ban-types */
 
-type ExtensionPreferences = {}
+type ExtensionPreferences = {
+  /** Default Network - The network to use when none is explicitly selected */
+  "defaultNetwork": "1" | "8453" | "42161" | "137" | "10" | "56" | "59144" | "57073" | "42170" | "324" | "43114" | "100" | "534352" | "42220" | "5000" | "81457" | "146" | "130" | "747" | "480" | "33139" | "2741" | "999" | "34443"
+}
 
 /** Preferences accessible in all the extension's commands */
 declare type Preferences = ExtensionPreferences
@@ -28,15 +31,15 @@ declare namespace Preferences {
 declare namespace Arguments {
   /** Arguments passed to the `explorer` command */
   export type Explorer = {
-  /** Mainnet */
-  "network": "1" | "8453" | "42161" | "137" | "10" | "56" | "59144" | "57073" | "42170" | "324" | "43114" | "100" | "534352" | "42220" | "5000" | "81457" | "146" | "130" | "747" | "480" | "33139" | "2741" | "999" | "34443"
+  /** Default */
+  "network": "default" | "1" | "8453" | "42161" | "137" | "10" | "56" | "59144" | "57073" | "42170" | "324" | "43114" | "100" | "534352" | "42220" | "5000" | "81457" | "146" | "130" | "747" | "480" | "33139" | "2741" | "999" | "34443"
 }
   /** Arguments passed to the `intel` command */
   export type Intel = {}
   /** Arguments passed to the `code` command */
   export type Code = {
-  /** Mainnet */
-  "network": "1" | "8453" | "42161" | "137" | "10" | "56" | "43114" | "100" | "81457" | "146"
+  /** Default */
+  "network": "default" | "1" | "8453" | "42161" | "137" | "10" | "56" | "43114" | "100" | "81457" | "146"
 }
   /** Arguments passed to the `profile` command */
   export type Profile = {}

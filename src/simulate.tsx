@@ -2,6 +2,7 @@ import { Action, ActionPanel, Clipboard, Form, closeMainWindow, open, showHUD } 
 import { useForm } from "@raycast/utils";
 import { useEffect, useState } from "react";
 import { buildTenderlyUrl } from "./lib/build-tenderly-url";
+import { getDefaultNetworkId } from "./lib/get-default-network-id";
 import { NETWORKS } from "./lib/networks";
 
 interface FormValues {
@@ -47,7 +48,7 @@ function SimulateForm({ prefill }: { prefill: { to: string; calldata: string } }
     initialValues: {
       to: prefill.to,
       calldata: prefill.calldata,
-      network: "1",
+      network: getDefaultNetworkId(),
     },
     validation: {
       to(value) {
