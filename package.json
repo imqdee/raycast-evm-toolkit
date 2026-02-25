@@ -48,6 +48,12 @@
       ]
     },
     {
+      "name": "intel",
+      "title": "Open Intel",
+      "description": "Open an address on Arkham Intel blockchain analytics",
+      "mode": "no-view"
+    },
+    {
       "name": "code",
       "title": "Open Code",
       "description": "Open a contract's source code in a web IDE via deth.net",
