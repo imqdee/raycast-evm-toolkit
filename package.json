@@ -130,6 +130,8 @@
       ]
     }
   ],
+  "keywords": ["ethereum", "evm", "blockchain", "explorer", "etherscan", "web3", "toolkit"],
+  "platforms": ["macOS", "Windows"],
   "categories": ["Developer Tools", "Web"],
   "dependencies": {
     "@raycast/api": "^1.98.0",
