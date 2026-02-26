@@ -1,6 +1,6 @@
 # EVM Toolkit
 
-A [Raycast](https://raycast.com) extension for Ethereum power users. Copy an address, transaction hash, or block number, pick a network, hit Enter: the right explorer page opens instantly.
+A [Raycast](https://raycast.com) extension for EVM power users. Copy an address, transaction hash, or block number into your clipboard and instantly open block explorers, read contract source code, check portfolio balances, look up wallet analytics, or simulate transactions across 24+ networks.
 
 ## Commands
 
@@ -18,7 +18,7 @@ The extension detects what you copied based on its format:
 | Format                   | Detected as      |
 | ------------------------ | ---------------- |
 | `0x` + 40 hex characters | Address          |
-| `0x` + 66 hex characters | Transaction hash |
+| `0x` + 64 hex characters | Transaction hash |
 | Digits only              | Block number     |
 
 ### Open Code
@@ -32,7 +32,7 @@ Opens a smart contract's source code in a web IDE via [deth.net](https://ethersc
 
 Only addresses are accepted (tx hashes and block numbers are rejected). Available on networks supported by deth.net: Mainnet, Base, Arbitrum, Polygon, Optimism, BSC, Avalanche, Gnosis, Blast, Sonic.
 
-### Profile
+### Open Profile
 
 Opens an account's portfolio page on [DeBank](https://debank.com/).
 
@@ -42,12 +42,22 @@ Opens an account's portfolio page on [DeBank](https://debank.com/).
 
 Only addresses are accepted. Network-agnostic: DeBank covers all EVM chains automatically.
 
-### Simulate
+### Open Intel
+
+Opens an address's blockchain analytics on [Arkham Intel](https://intel.arkm.com/).
+
+1. Copy an address
+2. Trigger **Open Intel** in Raycast
+3. Press Enter
+
+Only addresses are accepted. Network-agnostic: Arkham covers all EVM chains automatically.
+
+### Simulate Transaction
 
 Opens a prefilled transaction simulation on [Tenderly](https://dashboard.tenderly.co/simulator/new).
 
 1. Copy an address or calldata to your clipboard (optional, used to prefill fields)
-2. Trigger **Open Simulate** in Raycast
+2. Trigger **Simulate Transaction** in Raycast
 3. Fill or adjust the form fields:
    - **Target Address** (required): the contract being called
    - **Calldata** (required): hex-encoded function call
@@ -57,16 +67,6 @@ Opens a prefilled transaction simulation on [Tenderly](https://dashboard.tenderl
 4. Press Enter
 
 If your clipboard contains an address it prefills the target; if it contains other hex data it prefills the calldata.
-
-### Intel
-
-Opens an address's blockchain analytics on [Arkham Intel](https://intel.arkm.com/).
-
-1. Copy an address
-2. Trigger **Open Intel** in Raycast
-3. Press Enter
-
-Only addresses are accepted. Network-agnostic: Arkham covers all EVM chains automatically.
 
 ## Supported Networks
 
@@ -80,14 +80,14 @@ Each network is mapped to its native block explorer. The extension handles explo
 
 ## Development
 
-Prerequisites: Node.js 22+, pnpm, [Raycast](https://raycast.com).
+Prerequisites: Node.js 22+, npm, [Raycast](https://raycast.com).
 
 ```sh
-pnpm install
-pnpm dev        # start in development mode (hot-reload in Raycast)
-pnpm build      # production build
-pnpm lint       # run biome (linter + formatter)
-pnpm fix-lint   # auto-fix lint/format issues
+npm install
+npm run dev        # start in development mode (hot-reload in Raycast)
+npm run build      # production build
+npm run lint       # run eslint
+npm run fix-lint   # auto-fix lint issues
 ```
 
 ## License
