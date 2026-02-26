@@ -3,7 +3,7 @@
   "name": "evm-toolkit",
   "title": "EVM Toolkit",
   "description": "A toolkit for Ethereum power users: explore addresses, transactions, and blocks across EVM chains",
-  "icon": "icon.png",
+  "icon": "extension_icon.png",
   "author": "imqdee",
   "license": "MIT",
   "commands": [
