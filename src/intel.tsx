@@ -1,4 +1,5 @@
-import { Clipboard, Toast, closeMainWindow, open, showHUD, showToast } from "@raycast/api";
+import { Clipboard, closeMainWindow, open, showHUD } from "@raycast/api";
+import { showFailureToast } from "@raycast/utils";
 import { detectInputType } from "./lib/detect-input";
 
 export default async function Command() {
@@ -6,21 +7,20 @@ export default async function Command() {
   const input = clipboard?.trim() || "";
 
   if (!input) {
-    await showToast({
-      style: Toast.Style.Failure,
+    await showFailureToast("Copy an account address first", {
       title: "Nothing in clipboard",
-      message: "Copy an account address first",
     });
     return;
   }
 
   const inputType = detectInputType(input);
   if (inputType !== "address") {
-    await showToast({
-      style: Toast.Style.Failure,
-      title: "Invalid clipboard content",
-      message: "Must be an account address (0x + 40 hex characters)",
-    });
+    await showFailureToast(
+      "Must be an account address (0x + 40 hex characters)",
+      {
+        title: "Invalid clipboard content",
+      },
+    );
     return;
   }
 
