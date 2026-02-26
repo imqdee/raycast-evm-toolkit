@@ -136,18 +136,14 @@
     "@raycast/utils": "^1.19.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.0",
+    "@raycast/eslint-config": "^1.0.11",
     "@types/react": "^19.0.10",
     "typescript": "^5.7.3"
   },
   "scripts": {
     "build": "ray build",
     "dev": "ray develop",
-    "lint": "biome check .",
-    "fix-lint": "biome check --write ."
-  },
-  "packageManager": "pnpm@10.17.1",
-  "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix"
   }
 }
