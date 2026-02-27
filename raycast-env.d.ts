@@ -24,6 +24,8 @@ declare namespace Preferences {
   export type Code = ExtensionPreferences & {}
   /** Preferences accessible in the `profile` command */
   export type Profile = ExtensionPreferences & {}
+  /** Preferences accessible in the `eip` command */
+  export type Eip = ExtensionPreferences & {}
   /** Preferences accessible in the `simulate` command */
   export type Simulate = ExtensionPreferences & {}
 }
@@ -43,6 +45,11 @@ declare namespace Arguments {
 }
   /** Arguments passed to the `profile` command */
   export type Profile = {}
+  /** Arguments passed to the `eip` command */
+  export type Eip = {
+  /** EIP number */
+  "eip": string
+}
   /** Arguments passed to the `simulate` command */
   export type Simulate = {}
 }
