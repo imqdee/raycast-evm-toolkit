@@ -103,7 +103,7 @@
     },
     {
       "name": "repository",
-      "title": "Open Repository",
+      "title": "Open Editor",
       "description": "Open a GitHub repository in a web IDE",
       "mode": "no-view"
     },
