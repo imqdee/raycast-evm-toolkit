@@ -102,6 +102,12 @@
       ]
     },
     {
+      "name": "repository",
+      "title": "Open Repository",
+      "description": "Open a GitHub repository in a web IDE",
+      "mode": "no-view"
+    },
+    {
       "name": "simulate",
       "title": "Simulate Transaction",
       "description": "Open a prefilled Tenderly simulation page for a transaction",

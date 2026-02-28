@@ -26,6 +26,8 @@ declare namespace Preferences {
   export type Profile = ExtensionPreferences & {}
   /** Preferences accessible in the `eip` command */
   export type Eip = ExtensionPreferences & {}
+  /** Preferences accessible in the `repository` command */
+  export type Repository = ExtensionPreferences & {}
   /** Preferences accessible in the `simulate` command */
   export type Simulate = ExtensionPreferences & {}
 }
@@ -50,6 +52,8 @@ declare namespace Arguments {
   /** EIP number */
   "eip": string
 }
+  /** Arguments passed to the `repository` command */
+  export type Repository = {}
   /** Arguments passed to the `simulate` command */
   export type Simulate = {}
 }
