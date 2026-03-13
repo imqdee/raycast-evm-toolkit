@@ -124,27 +124,17 @@
       ]
     },
     {
-      "name": "intel",
-      "title": "Open Intel",
-      "description": "Open an address in a blockchain intelligence tool",
+      "name": "arkham",
+      "title": "Open Arkham Intel",
+      "description": "Open an address in Arkham Intelligence explorer",
+      "mode": "no-view"
+    },
+    {
+      "name": "metasleuth",
+      "title": "Open MetaSleuth Intel",
+      "description": "Open an address in MetaSleuth blockchain explorer",
       "mode": "no-view",
       "arguments": [
-        {
-          "name": "tool",
-          "type": "dropdown",
-          "placeholder": "Arkham",
-          "required": false,
-          "data": [
-            {
-              "title": "Arkham",
-              "value": "arkham"
-            },
-            {
-              "title": "MetaSleuth",
-              "value": "metasleuth"
-            }
-          ]
-        },
         {
           "name": "network",
           "type": "dropdown",
@@ -186,6 +176,42 @@
             {
               "title": "Mantle",
               "value": "mantle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bubblemaps",
+      "title": "Open Bubblemaps Intel",
+      "description": "Open an address in Bubblemaps token holder visualization",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "network",
+          "type": "dropdown",
+          "placeholder": "Mainnet",
+          "required": false,
+          "data": [
+            {
+              "title": "Mainnet",
+              "value": "eth"
+            },
+            {
+              "title": "Base",
+              "value": "base"
+            },
+            {
+              "title": "BSC",
+              "value": "bsc"
+            },
+            {
+              "title": "Polygon",
+              "value": "polygon"
+            },
+            {
+              "title": "Avalanche",
+              "value": "avalanche"
             }
           ]
         }

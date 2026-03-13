@@ -6,15 +6,12 @@ import {
   showHUD,
 } from "@raycast/api";
 import { showFailureToast } from "@raycast/utils";
-import { buildIntelUrl } from "./lib/build-intel-url";
 import { detectInputType } from "./lib/detect-input";
-import type { IntelTool, MetaSleuthNetwork } from "./lib/intel-types";
 
 export default async function Command(
-  props: LaunchProps<{ arguments: Arguments.Intel }>,
+  props: LaunchProps<{ arguments: Arguments.Metasleuth }>,
 ) {
-  const tool = (props.arguments.tool || "arkham") as IntelTool;
-  const network = (props.arguments.network || "eth") as MetaSleuthNetwork;
+  const network = props.arguments.network || "eth";
 
   const clipboard = await Clipboard.readText();
   const input = clipboard?.trim() || "";
@@ -37,7 +34,7 @@ export default async function Command(
     return;
   }
 
-  const url = buildIntelUrl(tool, input, network);
+  const url = `https://metasleuth.io/result/${network}/${input}`;
   await open(url);
   await closeMainWindow();
   await showHUD("Opened in browser");
