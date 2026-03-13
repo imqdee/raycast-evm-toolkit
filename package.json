@@ -280,8 +280,26 @@
     {
       "name": "profile",
       "title": "Open Profile",
-      "description": "Open an account's portfolio page on DeBank",
-      "mode": "no-view"
+      "description": "Open an account's portfolio page",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "source",
+          "type": "dropdown",
+          "placeholder": "DeBank",
+          "required": false,
+          "data": [
+            {
+              "title": "DeBank",
+              "value": "debank"
+            },
+            {
+              "title": "Zerion",
+              "value": "zerion"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "eip",

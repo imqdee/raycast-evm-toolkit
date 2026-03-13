@@ -60,7 +60,10 @@ declare namespace Arguments {
   "network": "default" | "1" | "8453" | "42161" | "137" | "10" | "56" | "43114" | "100" | "81457" | "146"
 }
   /** Arguments passed to the `profile` command */
-  export type Profile = {}
+  export type Profile = {
+  /** DeBank */
+  "source": "debank" | "zerion"
+}
   /** Arguments passed to the `eip` command */
   export type Eip = {
   /** EIP number */
