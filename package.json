@@ -126,8 +126,70 @@
     {
       "name": "intel",
       "title": "Open Intel",
-      "description": "Open an address on Arkham Intel blockchain analytics",
-      "mode": "no-view"
+      "description": "Open an address in a blockchain intelligence tool",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "tool",
+          "type": "dropdown",
+          "placeholder": "Arkham",
+          "required": false,
+          "data": [
+            {
+              "title": "Arkham",
+              "value": "arkham"
+            },
+            {
+              "title": "MetaSleuth",
+              "value": "metasleuth"
+            }
+          ]
+        },
+        {
+          "name": "network",
+          "type": "dropdown",
+          "placeholder": "Mainnet",
+          "required": false,
+          "data": [
+            {
+              "title": "Mainnet",
+              "value": "eth"
+            },
+            {
+              "title": "BSC",
+              "value": "bsc"
+            },
+            {
+              "title": "Arbitrum",
+              "value": "arbitrum"
+            },
+            {
+              "title": "Polygon",
+              "value": "polygon"
+            },
+            {
+              "title": "Optimism",
+              "value": "optimism"
+            },
+            {
+              "title": "Base",
+              "value": "base"
+            },
+            {
+              "title": "Linea",
+              "value": "linea"
+            },
+            {
+              "title": "Avalanche",
+              "value": "avalanche"
+            },
+            {
+              "title": "Mantle",
+              "value": "mantle"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "code",

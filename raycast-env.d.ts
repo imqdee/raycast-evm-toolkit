@@ -39,7 +39,12 @@ declare namespace Arguments {
   "network": "default" | "1" | "8453" | "42161" | "137" | "10" | "56" | "59144" | "57073" | "42170" | "324" | "43114" | "100" | "534352" | "42220" | "5000" | "81457" | "146" | "130" | "747" | "480" | "33139" | "2741" | "999" | "34443"
 }
   /** Arguments passed to the `intel` command */
-  export type Intel = {}
+  export type Intel = {
+  /** Arkham */
+  "tool": "arkham" | "metasleuth",
+  /** Mainnet */
+  "network": "eth" | "bsc" | "arbitrum" | "polygon" | "optimism" | "base" | "linea" | "avalanche" | "mantle"
+}
   /** Arguments passed to the `code` command */
   export type Code = {
   /** Default */

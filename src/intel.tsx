@@ -1,8 +1,21 @@
-import { Clipboard, closeMainWindow, open, showHUD } from "@raycast/api";
+import {
+  Clipboard,
+  type LaunchProps,
+  closeMainWindow,
+  open,
+  showHUD,
+} from "@raycast/api";
 import { showFailureToast } from "@raycast/utils";
+import { buildIntelUrl } from "./lib/build-intel-url";
 import { detectInputType } from "./lib/detect-input";
+import type { IntelTool, MetaSleuthNetwork } from "./lib/intel-types";
 
-export default async function Command() {
+export default async function Command(
+  props: LaunchProps<{ arguments: Arguments.Intel }>,
+) {
+  const tool = (props.arguments.tool || "arkham") as IntelTool;
+  const network = (props.arguments.network || "eth") as MetaSleuthNetwork;
+
   const clipboard = await Clipboard.readText();
   const input = clipboard?.trim() || "";
 
@@ -24,7 +37,7 @@ export default async function Command() {
     return;
   }
 
-  const url = `https://intel.arkm.com/explorer/address/${input}`;
+  const url = buildIntelUrl(tool, input, network);
   await open(url);
   await closeMainWindow();
   await showHUD("Opened in browser");
