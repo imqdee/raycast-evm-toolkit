@@ -8,6 +8,12 @@
   "license": "MIT",
   "commands": [
     {
+      "name": "toolkit",
+      "title": "Open Commands",
+      "description": "Discoverable hub that lists every command in the extension",
+      "mode": "view"
+    },
+    {
       "name": "explorer",
       "title": "Open Explorer",
       "description": "Open an address, transaction, or block in the chain's block explorer",
@@ -278,28 +284,16 @@
       ]
     },
     {
-      "name": "profile",
-      "title": "Open Profile",
-      "description": "Open an account's portfolio page",
-      "mode": "no-view",
-      "arguments": [
-        {
-          "name": "source",
-          "type": "dropdown",
-          "placeholder": "DeBank",
-          "required": false,
-          "data": [
-            {
-              "title": "DeBank",
-              "value": "debank"
-            },
-            {
-              "title": "Zerion",
-              "value": "zerion"
-            }
-          ]
-        }
-      ]
+      "name": "debank",
+      "title": "Open DeBank Profile",
+      "description": "Open an address's portfolio page on DeBank",
+      "mode": "no-view"
+    },
+    {
+      "name": "zerion",
+      "title": "Open Zerion Profile",
+      "description": "Open an address's portfolio page on Zerion",
+      "mode": "no-view"
     },
     {
       "name": "eip",

@@ -16,6 +16,8 @@ type ExtensionPreferences = {
 declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
+  /** Preferences accessible in the `toolkit` command */
+  export type Toolkit = ExtensionPreferences & {}
   /** Preferences accessible in the `explorer` command */
   export type Explorer = ExtensionPreferences & {}
   /** Preferences accessible in the `arkham` command */
@@ -26,8 +28,10 @@ declare namespace Preferences {
   export type Bubblemaps = ExtensionPreferences & {}
   /** Preferences accessible in the `code` command */
   export type Code = ExtensionPreferences & {}
-  /** Preferences accessible in the `profile` command */
-  export type Profile = ExtensionPreferences & {}
+  /** Preferences accessible in the `debank` command */
+  export type Debank = ExtensionPreferences & {}
+  /** Preferences accessible in the `zerion` command */
+  export type Zerion = ExtensionPreferences & {}
   /** Preferences accessible in the `eip` command */
   export type Eip = ExtensionPreferences & {}
   /** Preferences accessible in the `repository` command */
@@ -37,6 +41,8 @@ declare namespace Preferences {
 }
 
 declare namespace Arguments {
+  /** Arguments passed to the `toolkit` command */
+  export type Toolkit = {}
   /** Arguments passed to the `explorer` command */
   export type Explorer = {
   /** Default */
@@ -59,11 +65,10 @@ declare namespace Arguments {
   /** Default */
   "network": "default" | "1" | "8453" | "42161" | "137" | "10" | "56" | "43114" | "100" | "81457" | "146"
 }
-  /** Arguments passed to the `profile` command */
-  export type Profile = {
-  /** DeBank */
-  "source": "debank" | "zerion"
-}
+  /** Arguments passed to the `debank` command */
+  export type Debank = {}
+  /** Arguments passed to the `zerion` command */
+  export type Zerion = {}
   /** Arguments passed to the `eip` command */
   export type Eip = {
   /** EIP number */
