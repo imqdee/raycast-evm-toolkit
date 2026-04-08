@@ -1,25 +1,8 @@
-import {
-  Clipboard,
-  type LaunchProps,
-  closeMainWindow,
-  open,
-  showHUD,
-} from "@raycast/api";
+import { Clipboard, closeMainWindow, open, showHUD } from "@raycast/api";
 import { showFailureToast } from "@raycast/utils";
-import { buildDebankUrl } from "./lib/build-debank-url";
-import { buildZerionUrl } from "./lib/build-zerion-url";
 import { detectInputType } from "./lib/detect-input";
 
-const urlBuilders: Record<string, (address: string) => string> = {
-  debank: buildDebankUrl,
-  zerion: buildZerionUrl,
-};
-
-export default async function Command(
-  props: LaunchProps<{ arguments: Arguments.Profile }>,
-) {
-  const source = props.arguments.source || "debank";
-
+export default async function Command() {
   const clipboard = await Clipboard.readText();
   const input = clipboard?.trim() || "";
 
@@ -41,8 +24,7 @@ export default async function Command(
     return;
   }
 
-  const buildUrl = urlBuilders[source];
-  const url = buildUrl(input);
+  const url = `https://debank.com/profile/${input}`;
   await open(url);
   await closeMainWindow();
   await showHUD("Opened in browser");
