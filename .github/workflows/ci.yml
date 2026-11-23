@@ -1,10 +1,10 @@
 name: CI
 
-# No run on a push to main: changes land through PRs, which run this job, and
-# nothing reads main's runs (no deploy, no badge, no required check)
+# No run on a push to main: changes land through PRs, which run these jobs, and
+# nothing reads main's runs (no deploy, no badge)
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "base/**"]
 
 # A newer push to the same PR cancels the run it supersedes
 concurrency:
@@ -35,3 +35,13 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  # The one check the repository ruleset requires. It fails when a job it waits on
+  # failed or was cancelled, so every job that runs on a pull request is listed in `needs`
+  ci-gate:
+    if: always()
+    needs: [check]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: '[ "${{ contains(needs.*.result, ''failure'') || contains(needs.*.result, ''cancelled'') }}" = false ]'
